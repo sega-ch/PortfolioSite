@@ -1,0 +1,1082 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+// чёрный красный белый
+
+$red: rgb(218, 35, 35);
+$white: rgb(240, 222, 222);
+$black: rgb(0, 0, 0);
+
+//more 500
+$titles: 50px;
+$subtitles: 35px;
+$introTxt: 65px;
+$usualTxt: 20px;
+$skillTxt: 25px;
+
+//less 500
+$mTitles: 40px;
+$mSubtitles: 30px;
+$mIntroTxt: 35px;
+$mUsualTxt: 15px;
+$mSkillTxt: 20px;
+
+@mixin titleStyle {
+    font-size: $titles;
+    margin-top: 100px;
+    border-bottom: 3px solid $red;
+    border-top: 3px solid $red;
+}
+
+@mixin portfolioPics {
+
+    width: 450px;
+    height: 255px;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+@mixin portHovs {
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+
+    opacity: 95%;
+
+    color: $white;
+
+    a {
+        text-decoration: none;
+        color: $red;
+        margin-bottom: 25px;
+    }
+
+}
+
+@keyframes anim {
+
+    0% {background-image: url(../src/orgstim.png)}
+    100% {background-color: black}
+    
+}
+
+.main {
+
+    display: flex;
+    justify-content: center;
+    width: 100vw; //стилизация
+    height: auto;
+   
+    .main-container {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .header {
+
+            position: fixed;
+            width: auto;
+            margin-top: 20px;
+
+            border-radius: 0 0 25px 25px;
+            
+            .menu
+            {
+                display: flex;
+                justify-content: center;
+
+                .link
+                {
+                    
+                    color: $white;
+                    font-size: $usualTxt;
+                    text-decoration: none;
+                    margin: 5px;
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+        
+        .all {
+
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .backGif {
+
+                background: url(../src/typer.gif);
+                filter: brightness(30%);
+                background-size: cover;
+                width: 1519px;
+                height: 780px;
+                margin-top: -55px;
+                z-index: -1;
+
+            }
+
+            .offer {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: -500px;
+
+                .offer-container
+                {   
+        
+                    display: flex;
+                    text-align: center;
+                    font-size: $introTxt;
+                    font-weight: bold;
+                    color: $white;
+
+                }
+
+                .downArrow
+                {
+                    margin-top: 250px;
+                    width: 100px;
+                    height: 35px;
+                }
+
+            }
+
+            .introduction {
+
+                margin-top: 180px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .introduction-container {
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    widows: 100%;
+
+                    .title {
+                        @include titleStyle();
+                    }
+
+                    .mPhoto {
+
+                        margin-top: 70px;
+
+                        img {
+
+                            width: 300px;
+                            height: 300px;
+                            border-radius: 50%;
+
+                        }
+
+                    }
+
+                    .discription {
+
+                        width: 100%;
+                        margin-top: 50px;
+                        display: flex;
+                        justify-content: center;
+                       
+
+                        .info {
+
+                            
+
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                            width: 80%;
+                            margin: 50px;
+                            font-size: $usualTxt;
+
+                            .warn {
+
+                                
+                                margin-top: 30px;
+                                background-color: $black;
+                                padding: 20px;
+                                border-radius: 25px;
+
+                                color: $white;
+                                font-size: $usualTxt;
+                                font-weight: 500;
+
+                            }
+
+                        }
+
+                        
+
+                    }
+
+                }
+                
+
+            }
+
+            .skills {
+
+                margin-top: 60px;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                
+                .skills-container {
+
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .soft {
+
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                       
+                     
+                        .title {
+                        
+                            @include titleStyle();
+
+                        }
+
+                        .info {
+
+                            display: flex;
+                            justify-content: space-around;
+                            flex-wrap: wrap;
+                            width: 85%;
+
+                            margin-top: 80px;
+                            margin-bottom: 80px;
+
+                            .skill {
+
+                                margin: 40px;     
+                                padding: 10px;                                                      
+
+                                font-size: $skillTxt;
+                                font-weight: 500;
+    
+                                border-bottom: 1px solid $red;
+                                
+
+                                &:hover {
+
+                                    background-color: $red;
+                                    cursor: pointer;
+                                    color: $white;
+                                    border-radius: 15px;
+
+                                }
+
+                            }
+
+                          
+
+
+                            
+                        }
+
+                    }
+                   
+                    .hard {
+
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                       
+                     
+                        .title {
+                        
+                            @include titleStyle();
+
+                        }
+
+                        .info {
+
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            width: 80%;
+
+                            .direction {
+
+                                margin-top: 80px;
+                                font-size: $subtitles;
+                                border-bottom: 3px solid $red;
+                                width: 150px;
+                                text-align: center;
+
+                            }
+
+                            .steck {
+                                
+                                width: 100%;
+                                display: flex;                        
+                                justify-content: space-around;                                
+                                flex-wrap: wrap;
+                                max-inline-size: 85%;
+                                margin-inline: auto;
+                                margin-top: 60px;                            
+
+                                img {                                   
+
+                                    width: 145px;
+                                    height: 125px;
+                                    margin: 50px;   
+                                    border-radius: 7%;                             
+
+                                }
+
+                                .an {
+
+                                    width: 175px;
+                                    height: 125px;                                  
+
+                                }
+
+                                .nodeJS {
+
+                                    width: 300px;
+                                    height: 150px;
+                                }
+
+                                .bem {
+                                    
+                                    width: 175px;
+                                    height: 125px;
+                                }
+
+                                .css {
+                                    width: 110px;
+                                }
+
+                                .webpack {
+
+                                    width: 185px;
+                                    height: 150px;
+                                }
+
+                                .csharp {
+
+                                    width: 120px;
+                                }
+
+                                .github {
+                                    width: 200px;
+                                }
+
+                            }
+                            
+                        }
+
+                    }
+
+                   
+
+                    
+
+                }
+
+            }
+
+            .portfolio {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                width: 100%;
+                margin-top: 20px;
+
+                .experience {
+
+                    width: 80%;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .title {
+                        @include titleStyle();
+                    }
+
+                    .places {
+
+                        display: flex;
+                        flex-direction: column-reverse;                       
+                        margin-top: 50px;
+                        font-size: $usualTxt;
+                        text-align: left; 
+                        list-style-type: none;
+
+                        .place {
+
+                            margin: 10px;
+
+                        }
+
+                    }
+                   
+                }
+
+                .portfolio-container {
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+
+                    .title {
+
+                        @include titleStyle();
+                        
+                    }
+
+                    .cards {
+
+                        display: flex;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        margin-top: 50px;
+
+                       .orgstim {
+
+                            .pictureO {
+                                
+                               
+                                background-image: url(../src/orgstim.png);
+                                @include portfolioPics();
+
+                                .pictureOhov
+                                {
+                                   display: none;
+                                }
+
+                                &:hover .pictureOhov {
+
+                                    @include portHovs();
+
+                                }
+
+                            }
+
+                       }
+
+                       .fz115 {
+
+                            .pictureF {
+                                    
+                                background-image: url(../src/fz115.png);
+                                @include portfolioPics();
+
+                                .pictureOhov
+                                {
+                                   display: none;
+                                }
+
+                                &:hover .pictureOhov {
+
+                                    @include portHovs();
+
+                                }
+                            
+                            }
+
+                       }
+
+                       .kzbank {
+
+                            .pictureK {
+                                    
+                                background-image: url(../src/kzbank.png);
+                                @include portfolioPics();
+
+                                .pictureOhov
+                                {
+                                   display: none;
+                                }
+
+                                &:hover .pictureOhov {
+
+                                   @include portHovs();
+
+                                }
+
+                            }
+
+                       }
+
+                    }
+
+                }
+
+            }
+            
+            .contacts {
+
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 100px;
+
+                .contacts-container {
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 80%;
+
+                    .title {
+
+                        @include titleStyle();
+
+                    }      
+                    
+                    .connection {
+
+                       margin-top: 100px;
+
+                       width: 100%;
+                       display: flex;
+                       justify-content: space-around;
+                     
+                       .data {
+
+                            display: flex;
+                            flex-direction: column;
+
+                            .phone {
+                                display: flex;
+                                justify-content: center;
+                                font-size: $usualTxt;
+
+                                a {
+                                    text-decoration: none;
+                                    color: black;
+                                }
+                            }
+
+                            .socials {
+
+                                display: flex;
+                                justify-content: space-around;
+
+                                .social {
+
+                                    display: flex;
+                                    align-items: center;
+                                    margin-top: 20px;
+                                    text-decoration: none;
+
+                                    .tg {
+
+                                        width: 60px;
+
+                                    }
+
+                                    .git {
+
+                                        width: 100px;
+
+                                    }
+
+                                    .mail {
+
+                                        color: black;
+                                        font-size: $usualTxt;
+                                    }
+
+                                }
+
+                            }
+
+                       }
+
+                       .cv {
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .cvText {
+                            
+                            font-size: $usualTxt;
+
+                        }
+
+                        img {
+
+                            margin-top: 10px;
+                            width: 250px;
+
+                        }      
+
+                       }
+
+                    }
+                    
+                }
+                
+
+            }
+
+        }
+
+    }
+   
+
+}
+
+@media (min-width: 1599px) {
+
+.main 
+{
+    width: 100vw;
+
+    .main-container {
+
+        .all {
+
+            .backGif {
+
+                background: url(../src/typer.gif);
+                filter: brightness(30%);
+                background-size: cover;
+                width: 100vw;
+                height: 780px;
+                margin-top: -55px;
+                z-index: -1;
+
+            }    
+        }
+   }
+
+}
+
+}
+
+@media (max-width: 500px) {
+
+    .main {
+       
+        .main-container {
+        
+            .header {
+    
+               width: 75%;
+
+               .menu
+               {   
+                   .link
+                   {
+                       margin: 5px;
+                       font-size: 12px;
+                   }
+   
+               }
+
+            }
+
+            .all {
+
+                .offer {
+
+                    .offer-container
+                    {   
+            
+                        font-size: 35px;
+    
+                    }    
+
+                        .downArrow
+                    {
+                       
+                        width: 80px;
+                        height: 35px;
+                    }
+                } 
+
+                .introduction {
+
+                    margin-top: 180px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    .introduction-container {                
+
+                        .title {
+                            margin-top: 10px;
+                            font-size: $mTitles;
+                        }
+
+                           .discription {
+
+                            width: 100%;
+                            margin-top: 50px;
+                            display: flex;
+                            justify-content: center;
+                        
+
+                            .info {  
+
+                                font-size: $mUsualTxt;
+
+                                .warn {
+
+                                    font-size: $mUsualTxt;
+                                    
+                                }
+
+                            }
+
+                        
+
+                        }
+
+                    }
+                }
+
+                .skills {
+
+                    margin-top: 30px;                    
+                
+                    .skills-container {
+                       
+                        .soft {
+                                                   
+                            .title {
+                            
+                                margin-top: 0px;
+                                font-size: $mTitles;
+
+                            }
+
+                            .info {
+
+                                margin-top: 40px;
+                                margin-bottom: 40px;
+
+                                .skill {
+
+                                    font-size: $mSkillTxt;                                    
+                                    
+                                }
+                          
+
+
+                                
+                            }
+
+                        }
+                    
+                        .hard {
+                        
+                            .title {
+                            
+                                font-size: $mTitles;
+                                margin: 30px;
+
+                            }
+
+                            .info {
+
+                                align-items: center;
+                          
+                                .direction {
+                                   
+                                    font-size: $subtitles;
+                                    margin-top: 40px;
+                                }
+
+                                .steck {                                   
+                                   
+                                    margin-top: 30px;                            
+
+                                    img {                                   
+
+                                        width: 120px;
+                                        height: 105px;
+                                        margin: 50px;   
+                                        border-radius: 7%;                             
+
+                                    }
+
+                                    .an {
+
+                                        width: 155px;
+                                        height: 115px;                                  
+
+                                    }
+
+                                    .nodeJS {
+
+                                        width: 275px;
+                                        height: 100px;
+                                    }
+
+                                    .bem {
+                                        
+                                        width: 155px;
+                                        height: 105px;
+                                    }
+
+                                    .css {
+                                        width: 85px;
+                                    }
+
+                                    .webpack {
+
+                                        width: 165px;
+                                        height: 120px;
+                                    }
+
+                                    .csharp {
+
+                                        width: 100px;
+                                    }
+
+                                    .npm {
+
+                                        width: 120px;
+                                        height: 80px;
+
+                                    }
+
+                                }
+                                
+                            }
+
+                        }
+
+                    
+
+                        
+
+                    }
+
+                }
+                
+                .portfolio {
+                    
+                    margin-top: 0px;
+    
+                    .experience {
+    
+                       
+    
+                        .title {
+
+                            font-size: $mTitles;
+                            margin-top: 30px;
+                        }
+    
+                        .places {
+                                
+                            font-size: $mUsualTxt;
+    
+                        }
+                       
+                    }
+    
+                    .portfolio-container {              
+    
+                        .title {
+    
+                            font-size: $mTitles;
+                            margin-top: 30px;
+                            
+                        }
+    
+                        .cards {
+
+                            margin-top: 30px;
+    
+                           .orgstim {
+    
+                                .pictureO {
+                                    
+                                   
+                                    background-image: url(../src/orgstim.png);
+                                    width: 300px;
+                                    height: 170px;
+    
+                                }
+    
+                            }
+    
+                           .fz115 {
+    
+                                .pictureF {
+                                        
+                                    background-image: url(../src/fz115.png);
+                                    width: 300px;
+                                    height: 170px;
+    
+                    
+                                }
+    
+                            }
+    
+                           .kzbank {
+    
+                                .pictureK {
+                                        
+                                    background-image: url(../src/kzbank.png);
+                                    width: 300px;
+                                    height: 170px;
+    
+                                }
+    
+                           }
+    
+                        }
+    
+                    }
+    
+                }
+
+                .contacts {
+
+                    margin-bottom: 50px;
+    
+                    .contacts-container {
+
+                        .title {
+    
+                            font-size: $mTitles;
+                            margin-top: 30px;
+    
+                        }      
+                        
+                        .connection {
+    
+                           margin-top: 50px;
+
+                           .data {
+
+                                .phone {
+
+                                    font-size: $mUsualTxt;
+                                }
+    
+                                .socials {
+
+                                    display: flex;
+                                    flex-direction: column-reverse;
+                                    align-items: center;
+
+                                    .social {
+    
+                                        display: flex;
+                                        align-items: center;
+                                        margin-top: 20px;
+                                        text-decoration: none;
+    
+                                        .tg {
+    
+                                            width: 30px;
+    
+                                        }
+    
+                                        .git {
+    
+                                            width: 70px;
+    
+                                        }
+    
+                                        .mail {
+    
+                                            color: black;
+                                            font-size: $mUsualTxt;
+                                        }
+    
+                                    }
+    
+                                }
+    
+                           }
+    
+                           .cv {   
+                            
+                            .cvText {
+                                
+                                font-size: $mUsualTxt;
+    
+                            }
+    
+                            img {
+    
+                                margin-top: 10px;
+                                width: 170px;
+    
+                            }      
+    
+                           }
+    
+                        }
+                        
+                    }
+                    
+    
+                }
+
+            }
+        }
+    }    
+
+}
+
+@media (max-width: 407px) {
+
+    .main {
+       
+        .main-container {
+        
+            .header {
+    
+               width: 90%;
+
+               .menu
+               {   
+                   .link
+                   {
+                       
+                    margin: 5px;
+                   }
+   
+               }
+
+            }
+        }
+    }    
+
+}
