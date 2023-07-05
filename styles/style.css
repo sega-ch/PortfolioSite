@@ -515,6 +515,7 @@
   .main .main-container .all .skills .skills-container .hard .info .direction {
     font-size: 35px;
     margin-top: 40px;
+    width: unset;
   }
   .main .main-container .all .skills .skills-container .hard .info .steck {
     margin-top: 30px;
