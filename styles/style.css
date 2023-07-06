@@ -25,6 +25,30 @@
   align-items: center;
   width: 100%;
 }
+.main .main-container .burger-btn {
+  display: none;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 15px;
+  z-index: 2;
+}
+.main .main-container .burger-btn span {
+  margin-left: 5px;
+  margin-top: 10px;
+  position: absolute;
+  background-color: rgb(255, 249, 249);
+  width: 40px;
+  height: 3px;
+  z-index: 2;
+}
+.main .main-container .burger-btn span:nth-child(2) {
+  transform: translateY(10px);
+}
+.main .main-container .burger-btn span:nth-child(3) {
+  transform: translateY(20px);
+}
 .main .main-container .header {
   position: fixed;
   width: auto;
@@ -455,12 +479,33 @@
   }
 }
 @media (max-width: 500px) {
+  .main .main-container .burger-btn {
+    display: block;
+  }
   .main .main-container .header {
-    width: 75%;
+    position: fixed;
+    width: 175px;
+    margin-top: 0;
+    left: -350px;
+    top: 0px;
+    align-content: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0 0 10px 10px;
+    padding: 55px;
+  }
+  .main .main-container .header .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
   }
   .main .main-container .header .menu .link {
+    color: rgb(240, 222, 222);
+    font-size: 20px;
+    text-decoration: none;
     margin: 5px;
-    font-size: 12px;
+    cursor: pointer;
+    position: relative;
   }
   .main .main-container .all .offer .offer-container {
     font-size: 35px;
@@ -515,7 +560,6 @@
   .main .main-container .all .skills .skills-container .hard .info .direction {
     font-size: 35px;
     margin-top: 40px;
-    width: unset;
   }
   .main .main-container .all .skills .skills-container .hard .info .steck {
     margin-top: 30px;
