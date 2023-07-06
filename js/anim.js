@@ -7,6 +7,8 @@ const skill = document.querySelector("#skill");
 const portf = document.querySelector("#portf");
 const contacts = document.querySelector("#contacts");
 
+
+
 window.addEventListener('scroll', function () {
     const scrollPosition = window.scrollY;
     if (scrollPosition >= 5 && scrollPosition <= 10) {
@@ -42,7 +44,7 @@ const animation = menu.animate(
 link.addEventListener('click', function () { 
 
     window.scrollTo({
-        top: 820,
+        top: document.querySelector(".introduction").getBoundingClientRect().top + window.scrollY,
         behavior: 'smooth'
     });
 
@@ -51,7 +53,7 @@ link.addEventListener('click', function () {
 about.addEventListener('click', function () { 
 
     window.scrollTo({
-        top: 820,
+        top: document.querySelector(".introduction").getBoundingClientRect().top + window.scrollY,
         behavior: 'smooth'
     });
 
@@ -69,7 +71,7 @@ home.addEventListener('click', function () {
 skill.addEventListener('click', function () { 
 
     window.scrollTo({
-        top: 1850,
+        top: document.querySelector(".skills-container").getBoundingClientRect().top + window.scrollY,
         behavior: 'smooth'
     });
 
@@ -78,7 +80,7 @@ skill.addEventListener('click', function () {
 portf.addEventListener('click', function () { 
 
     window.scrollTo({
-        top: 5050,
+        top: document.querySelector(".portfolio-container").getBoundingClientRect().top + window.scrollY,
         behavior: 'smooth'
     });
 
@@ -87,7 +89,7 @@ portf.addEventListener('click', function () {
 contacts.addEventListener('click', function () { 
 
     window.scrollTo({
-        top: 5650,
+        top: document.querySelector(".contacts-container").getBoundingClientRect().top + window.scrollY,
         behavior: 'smooth'
     });
 
