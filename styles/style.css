@@ -669,6 +669,10 @@
     margin-top: 10px;
     width: 170px;
   }
+.main .main-container .all .skills .skills-container .hard .info .direction {
+  min-width: 150px;
+  }
+
 }
 @media (max-width: 407px) {
   .main .main-container .header {
