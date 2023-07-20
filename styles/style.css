@@ -684,6 +684,6 @@
   }
 
   .main .main-container .all .skills .skills-container .hard .info .direction {
-  min-width: 150px;
+  width: auto;
 }
 }/*# sourceMappingURL=style.css.map */
