@@ -560,6 +560,7 @@
   .main .main-container .all .skills .skills-container .hard .info .direction {
     font-size: 32px;
     margin-top: 40px;
+    width: auto;
   }
   .main .main-container .all .skills .skills-container .hard .info .steck {
     margin-top: 30px;
