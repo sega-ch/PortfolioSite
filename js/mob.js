@@ -26,8 +26,6 @@ brg.addEventListener("click", function () {
 })
 
 link.addEventListener("click", function () {
-
-    header.style = "transform: translateX(-500px); transition: transform .5s";
     line[1].style = "opacity: 1; transform: translateY(10px); transition: transform .5s";
     line[0].style = " transform: rotate(0deg) translateY(0px); transition: transform .5s";
     line[2].style = " transform: rotate(0deg)  translateY(20px); transition: transform .5s";
