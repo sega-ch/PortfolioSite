@@ -6,7 +6,9 @@ const about = document.querySelector("#about");
 const skill = document.querySelector("#skill");
 const portf = document.querySelector("#portf");
 const contacts = document.querySelector("#contacts");
-
+const line = document.querySelectorAll(".line");
+const header = document.querySelector(".header");
+let isOpen = false;
 
 
 window.addEventListener('scroll', function () {
@@ -56,6 +58,12 @@ about.addEventListener('click', function () {
         top: document.querySelector(".introduction").getBoundingClientRect().top + window.scrollY,
         behavior: 'smooth'
     });
+
+    header.style = "transform: translateX(-500px); transition: transform .5s";
+    line[1].style = "opacity: 1; transform: translateY(10px); transition: transform .5s";
+    line[0].style = " transform: rotate(0deg) translateY(0px); transition: transform .5s";
+    line[2].style = " transform: rotate(0deg)  translateY(20px); transition: transform .5s";
+    isOpen = false;
 
 });
 
